@@ -3,9 +3,6 @@ name: Run Sonar Scanner
 description: Run Sonar Scanner
 
 inputs:
-  github-repo-name:
-    required: true
-    description: Repository name
   GITHUB_TOKEN:
     required: true
     description: GITHUB_TOKEN

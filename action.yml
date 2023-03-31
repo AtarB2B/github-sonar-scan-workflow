@@ -22,7 +22,7 @@ runs:
       uses: actions/download-artifact@v3
 
     - name: "Move coverage file to correct folder"
-      run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' htmlcov/index.html
+      run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/coverage.xml
       shell: bash
 
     - uses: SonarSource/sonarcloud-github-action@master

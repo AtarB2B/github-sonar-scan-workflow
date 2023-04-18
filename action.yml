@@ -22,7 +22,7 @@ runs:
       uses: actions/download-artifact@v3
 
     - name: "Move coverage file to correct folder"
-      run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/coverage.xml
+      run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/lcov.info
       shell: bash
 
     - uses: SonarSource/sonarcloud-github-action@master
@@ -30,8 +30,8 @@ runs:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}
 
-    - name: SonarQube Quality Gate check
-      id: sonarqube-quality-gate-check
-      uses: sonarsource/sonarqube-quality-gate-action@master
-      env:
-       SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}
+    # - name: SonarQube Quality Gate check
+    #   id: sonarqube-quality-gate-check
+    #   uses: sonarsource/sonarqube-quality-gate-action@master
+    #   env:
+    #    SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

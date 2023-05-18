@@ -27,8 +27,12 @@ runs:
 
     - run: ls -lah
       shell: bash
-      
+
     - uses: sonarsource/sonarcloud-github-action@master
+      with:
+        args: >
+          -Dsonar.organization=atarb2b
+          -Dsonar.projectKey=AtarB2B_erp-frontend
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

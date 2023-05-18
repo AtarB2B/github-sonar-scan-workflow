@@ -38,7 +38,6 @@ runs:
           -Dsonar.exclusions=**/kendo*,package-lock.json
           -Dsonar.javascript.lcov.reportPaths=code-coverage-report/lcov.info
           -Dsonar.test=src
-          -Dsonar.test.inclusions="src/**/*.spec.js, src/**/*.test.js"
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

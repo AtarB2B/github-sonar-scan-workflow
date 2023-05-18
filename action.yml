@@ -24,7 +24,6 @@ runs:
     - name: "Move coverage file to correct folder"
       run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/lcov.info
       shell: bash
-      working-directory: erp
 
     - uses: SonarSource/sonarcloud-github-action@master
       env:

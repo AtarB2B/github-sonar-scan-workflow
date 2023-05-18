@@ -30,7 +30,6 @@ runs:
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}
-      working-directory: erp
 
     # - name: SonarQube Quality Gate check
     #   id: sonarqube-quality-gate-check

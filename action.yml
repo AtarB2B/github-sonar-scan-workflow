@@ -26,6 +26,8 @@ runs:
       shell: bash
 
     - uses: sonarsource/sonarcloud-github-action@master
+      with:
+        projectBaseDir: erp
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

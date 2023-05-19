@@ -35,6 +35,10 @@ runs:
     - uses: sonarsource/sonarcloud-github-action@master
       with:
         projectBaseDir: erp
+        args: >
+          -Dsonar.organization=atarb2b
+          -Dsonar.projectKey=AtarB2B_erp-frontend
+          -Dsonar.sources=.
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

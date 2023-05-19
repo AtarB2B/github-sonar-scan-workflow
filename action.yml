@@ -28,7 +28,7 @@ runs:
     - run: ls -lah
       shell: bash
 
-    - uses: sonarsource/sonarcloud-github-action@master
+    - uses: sonarsource/sonarcloud-github-action@latest
       with:
         args: >
           -Dsonar.organization=atarb2b

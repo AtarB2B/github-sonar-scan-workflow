@@ -21,10 +21,10 @@ runs:
     - name: Download code coverage results
       uses: actions/download-artifact@v3
 
-    - name: "Move coverage file to correct folder"
-      run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/lcov.info
-      working-directory: erp/
-      shell: bash
+    # - name: "Move coverage file to correct folder"
+    #   run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/lcov.info
+    #   working-directory: erp/
+    #   shell: bash
 
     - uses: sonarsource/sonarcloud-github-action@master
       with:

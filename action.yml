@@ -30,14 +30,15 @@ runs:
 
     - uses: sonarsource/sonarcloud-github-action@latest
       with:
-        args: >
-          -Dsonar.organization=atarb2b
-          -Dsonar.projectKey=AtarB2B_erp-frontend
-          -Dsonar.sources=erp
-          -Dsonar.sourceEncoding=UTF-8
-          -Dsonar.exclusions=**/kendo*,package-lock.json
-          -Dsonar.javascript.lcov.reportPaths=code-coverage-report/lcov.info
-          -Dsonar.test=src
+        projectBaseDir: ./
+        # args: >
+        #   -Dsonar.organization=atarb2b
+        #   -Dsonar.projectKey=AtarB2B_erp-frontend
+        #   -Dsonar.sources=erp
+        #   -Dsonar.sourceEncoding=UTF-8
+        #   -Dsonar.exclusions=**/kendo*,package-lock.json
+        #   -Dsonar.javascript.lcov.reportPaths=code-coverage-report/lcov.info
+        #   -Dsonar.test=src
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

@@ -28,7 +28,7 @@ runs:
     - run: ls -lah
       shell: bash
 
-    - uses: sonarsource/sonarcloud-github-action@latest
+    - uses: sonarsource/sonarcloud-github-action@master
       with:
         projectBaseDir: ./
         # args: >

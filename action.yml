@@ -25,7 +25,7 @@ runs:
       run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/coverage.xml
       shell: bash
 
-    - uses: sonarsource/sonarcloud-github-action@master
+    - uses: sonarsource/sonarcloud-github-action@latest
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

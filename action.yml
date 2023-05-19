@@ -24,21 +24,8 @@ runs:
     - name: "Move coverage file to correct folder"
       run: sed -i 's+/home/runner/work/${{ inputs.github-repo-name }}/${{ inputs.github-repo-name }}+/github/workspace+g' code-coverage-report/lcov.info
       shell: bash
-
-    - name: Set Vars
-      run: |
-        echo "CURRENT_DATE=$(date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
-        echo "SONAR_ORGANIZATION=atarb2b" >> $GITHUB_ENV
-        echo "SONAR_PROJECT_KEY=AtarB2B_erp-frontend" >> $GITHUB_ENV
-      shell: bash
-
+    
     - uses: sonarsource/sonarcloud-github-action@master
-      with:
-        projectBaseDir: erp
-        args: >
-          -Dsonar.organization=atarb2b
-          -Dsonar.projectKey=AtarB2B_erp-frontend
-          -Dsonar.sources=.
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}

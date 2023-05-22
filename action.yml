@@ -28,7 +28,7 @@ runs:
     - uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ inputs.SONAR_TOKEN }}
+        SONAR_TOKEN: "7e46568cf99751eaee7b5a98824e211c10e47a46"
 
     # - name: SonarQube Quality Gate check
     #   id: sonarqube-quality-gate-check
